@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --preto: black;
+    --branco: white;
+    --roxo: purple;
+    --cinza: rgb(41, 40, 40);
+    --fonte-principal: "Segoe UI", Tahoma, sans-serif;
+    --fonte-titulos: "Trebuchet MS", "Segoe UI", sans-serif;
+
+    --tamanho-titulo-celular: 1.3rem;
+    --tamanho-titulo-computador: 2.5rem;
+}
+
+body{
+    font-family: var(--fonte-principal);
+}
+
+header nav > p,
+h1,
+h2,
+h3{
+    font-family: var(--fonte-titulos);
+}
+
+header{
+    background-color: var(--cinza);
+    color: var(--branco);
+    padding: 1.5rem 5rem;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav a{
+    text-decoration: none;
+    color: var(--branco);
+}
+
+main{
+    background-color: var(--preto);
+    color: var(--branco);
+    padding: 1.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap:4rem;
+}
+
+
+.heroContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.heroText{
+    flex: 1 1 50%;
+    min-width: 0;
+}
+
+.heroContainer p{
+    font-size: clamp(var(--tamanho-titulo-celular), 3vw, var(--tamanho-titulo-computador));
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.heroContainer img{
+    flex: 1 1 50%;
+    width: 50%;
+    min-width: 0;
+    max-height: 340px;
+    object-fit: contain;
+}
+
+@media (max-width: 760px){
+
+    header nav{
+        flex-direction: column;
+    }
+    header nav article{
+        display: none;
+    }
+    main{
+        padding: 1.5rem 1rem;
+    }
+
+    .heroContainer{
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .heroContainer p{
+        font-size: var(--tamanho-titulo-celular);
+    }
+
+    .heroContainer img{
+        width: 100%;
+        max-height: 260px;
+    }
+}
+
+.actionsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.actionsItem{
+
+    border-radius: 5px;
+
+    background-color: var(--cinza);
+    padding: 1rem;
+    flex: 1 1 220px;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap:1rem;
+}
+
+.actionsItem img{
+    width: 64px;
+    height: 64px;
+    align-self: center;
+}
+
+footer{
+    background-color: var(--cinza);
+    color: var(--branco);
+    padding: 1.5rem 5rem;
+    text-align: center;
+}
