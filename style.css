@@ -1,0 +1,165 @@
+/* ===================================
+   SLIDE 7 - INTRODUÇÃO AO CSS
+=================================== */
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #a78bfa;
+    font-size: 36px;
+}
+
+h2 {
+    color: #c4b5fd;
+    font-size: 26px;
+}
+
+p {
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+a {
+    color: #a78bfa;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+/* ===================================
+   SLIDE 8 - ESTILIZAÇÃO DO PORTFÓLIO
+=================================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: #1e293b;
+    padding: 20px;
+}
+
+nav a {
+    margin-right: 15px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #7c3aed;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.botao:hover {
+    background-color: #6d28d9;
+}
+
+.card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px #00000022;
+}
+
+.lista-habilidades {
+    list-style: none;
+    padding: 0;
+}
+
+footer {
+    background-color: #1e293b;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ===================================
+   SLIDE 9 - FLEXBOX
+=================================== */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.cabecalho nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cabecalho nav a {
+    margin-right: 0;
+}
+
+.lista-habilidades {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.lista-habilidades .card {
+    flex: 1 1 180px;
+    margin-bottom: 0;
+}
+
+/* ===================================
+   SLIDE 9 - RESPONSIVIDADE
+=================================== */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cabecalho nav {
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    .lista-habilidades {
+        flex-direction: column;
+    }
+
+    .lista-habilidades .card {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+}
+
+/* ===================================
+   SLIDE 10 - PERSONALIZAÇÃO
+   Altere as cores, fontes e espaçamentos
+   das regras acima para criar seu estilo.
+=================================== */
