@@ -46,7 +46,7 @@ O projeto foi pensado para pessoas que estão começando no desenvolvimento web.
 ## 📁 Estrutura do projeto
 
 ```text
-meu-portfolio/
+Guia-Minicurso/
 ├── index.html       # Estrutura e conteúdo do site
 ├── style.css        # Estilos e regras responsivas
 └── README.md        # Documentação do repositório
